@@ -475,6 +475,81 @@ tr:hover td { background: rgba(255,255,255,0.02); }
     color: var(--text-dim);
     white-space: pre;
 }
+
+/* ===== FEATURE COMPARISON ===== */
+.feature-map { margin: 0 0 32px; overflow-x: auto; }
+.feature-map table { font-size: 0.78rem; min-width: 900px; }
+.feature-map th { position: sticky; top: 0; z-index: 2; }
+.feature-map th.comp-header {
+    text-align: center; font-size: 0.7rem; padding: 10px 8px;
+    min-width: 85px; max-width: 105px;
+}
+.feature-map th.comp-header.highlight {
+    background: rgba(94,234,212,0.12);
+    border-bottom: 2px solid var(--accent);
+}
+.feature-map td { text-align: center; padding: 7px 8px; font-size: 0.78rem; }
+.feature-map td:first-child { text-align: left; font-weight: 500; white-space: nowrap; color: var(--text-dim) !important; }
+.feature-map .check { color: var(--win) !important; font-weight: 700; }
+.feature-map .cross { color: #4b5563 !important; }
+.feature-map .partial { color: var(--warn) !important; font-size: 0.72rem; }
+.feature-map .price-cell { color: var(--accent) !important; font-weight: 600; font-size: 0.75rem; }
+.feature-map .demo-cell { font-size: 0.7rem; color: var(--text-dim) !important; line-height: 1.4; }
+.indirect-label {
+    display: inline-block;
+    background: rgba(167,139,250,0.12);
+    color: var(--purple) !important;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-left: 8px;
+    font-weight: 600;
+}
+.comp-context {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 12px 0 8px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+.comp-context strong { color: var(--accent) !important; }
+.comp-context em { color: var(--text-dim) !important; }
+.comp-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 32px 0 28px;
+}
+.indirect-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+}
+.indirect-section h4 { font-size: 0.88rem; margin-bottom: 4px; }
+.indirect-section .comp-meta {
+    font-size: 0.75rem;
+    color: var(--text-dim) !important;
+    margin-bottom: 10px;
+}
+.indirect-section .comp-meta span {
+    display: inline-block;
+    margin-right: 16px;
+    color: var(--text-dim) !important;
+}
+.indirect-section p { font-size: 0.82rem; line-height: 1.6; color: var(--text-dim) !important; margin-bottom: 8px; }
+.indirect-section .strategic-note {
+    border-left: 2px solid var(--accent);
+    padding-left: 12px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: var(--text) !important;
+}
+
 </style>
 </head>
 <body>
@@ -2023,9 +2098,320 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 <div class="page-section" id="page-competitors">
 <div class="output-section">
     <div class="output-label">Reference</div>
-    <div class="output-title">Competitor Creative Library</div>
-    <p style="color:var(--text-dim); margin-bottom:20px; font-size:0.85rem;">Top ads per competitor from Pathmatics (est. spend). Media assets may not load if S3 links have expired.</p>
+    <div class="output-title">Competitive Landscape & Feature Mapping</div>
+    <p style="color:var(--text-dim); margin-bottom:24px; font-size:0.85rem;">Direct and indirect competitors mapped across key product dimensions. Feature data from public sources, April 2026. Ad libraries from Pathmatics (est. spend).</p>
     
+    <h3 style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 14px;font-weight:600;">Feature Comparison Matrix</h3>
+    <div class="feature-map">
+    <div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th style="min-width:150px;">Dimension</th>
+                <th class="comp-header highlight">Alinea</th>
+                <th class="comp-header">Robinhood</th>
+                <th class="comp-header">Acorns</th>
+                <th class="comp-header">SoFi</th>
+                <th class="comp-header">Stash</th>
+                <th class="comp-header">Betterment</th>
+                <th class="comp-header">Wealthfront</th>
+                <th class="comp-header">Public</th>
+                <th class="comp-header">Cash App</th>
+                <th class="comp-header">Fidelity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Primary Audience</td>
+                <td class="demo-cell" style="background:rgba(94,234,212,0.04);">Gen Z women<br>Avg age 22</td>
+                <td class="demo-cell">Gen Z / Millennial<br>Self-directed</td>
+                <td class="demo-cell">Millennials<br>Auto-invest beginners</td>
+                <td class="demo-cell">Millennials<br>All-in-one finance</td>
+                <td class="demo-cell">Beginners<br>Auto-invest</td>
+                <td class="demo-cell">Millennials<br>Hands-off savers</td>
+                <td class="demo-cell">Millennials<br>Passive investors</td>
+                <td class="demo-cell">Millennials<br>Social traders</td>
+                <td class="demo-cell">Gen Z<br>Payments-first</td>
+                <td class="demo-cell">Mass market<br>All experience levels</td>
+            </tr>
+            <tr>
+                <td>Pricing</td>
+                <td class="price-cell" style="background:rgba(94,234,212,0.04);">$120/yr</td>
+                <td class="price-cell">Free*</td>
+                <td class="price-cell">$36–108/yr</td>
+                <td class="price-cell">Free*</td>
+                <td class="price-cell">$36–108/yr</td>
+                <td class="price-cell">$48/yr or 0.25%</td>
+                <td class="price-cell">0.25% AUM</td>
+                <td class="price-cell">Free*</td>
+                <td class="price-cell">Free</td>
+                <td class="price-cell">Free</td>
+            </tr>
+            <tr>
+                <td>Stocks & ETFs</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓</td>
+                <td class="check">✓</td>
+                <td class="partial">ETFs only</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="partial">ETFs only</td>
+                <td class="partial">ETFs only</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+            </tr>
+            <tr>
+                <td>Crypto</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓ New (Feb '26)</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+            </tr>
+            <tr>
+                <td>Retirement (IRA / 401k)</td>
+                <td class="cross" style="background:rgba(94,234,212,0.04);">✗</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+            </tr>
+            <tr>
+                <td>Guided / Managed Portfolios</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓ Core product</td>
+                <td class="cross">✗</td>
+                <td class="check">✓ Auto</td>
+                <td class="check">✓ Robo</td>
+                <td class="check">✓ Auto</td>
+                <td class="check">✓ Core product</td>
+                <td class="check">✓ Core product</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="check">✓ Go / Wealth</td>
+            </tr>
+            <tr>
+                <td>AI Assistant / Coach</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓ AI Allie</td>
+                <td class="partial">Limited</td>
+                <td class="cross">✗</td>
+                <td class="partial">Relay AI</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="partial">Alpha AI</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+            </tr>
+            <tr>
+                <td>Themed / Curated Portfolios</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓ "Playlists"</td>
+                <td class="cross">✗</td>
+                <td class="partial">Limited themes</td>
+                <td class="cross">✗</td>
+                <td class="partial">Smart Portfolios</td>
+                <td class="partial">ESG / Impact only</td>
+                <td class="partial">SRI only</td>
+                <td class="partial">Limited</td>
+                <td class="cross">✗</td>
+                <td class="partial">Thematic baskets</td>
+            </tr>
+            <tr>
+                <td>Social / Community</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓ Playlist sharing</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="check">✓ Core feature</td>
+                <td class="partial">P2P payments</td>
+                <td class="cross">✗</td>
+            </tr>
+            <tr>
+                <td>Financial Education</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓ Daily lessons</td>
+                <td class="partial">Learn section</td>
+                <td class="partial">Grow magazine</td>
+                <td class="partial">Blog / resources</td>
+                <td class="check">✓ Stash Learn</td>
+                <td class="partial">Articles</td>
+                <td class="partial">Blog</td>
+                <td class="check">✓ Live shows</td>
+                <td class="cross">✗</td>
+                <td class="check">✓ Learning center</td>
+            </tr>
+            <tr>
+                <td>Fractional Shares</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+            </tr>
+            <tr>
+                <td>High-Yield Savings</td>
+                <td class="cross" style="background:rgba(94,234,212,0.04);">✗</td>
+                <td class="check">✓ Gold</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="partial">Savings</td>
+                <td class="cross">✗</td>
+            </tr>
+            <tr>
+                <td>Banking / Debit Card</td>
+                <td class="cross" style="background:rgba(94,234,212,0.04);">✗</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="check">✓ Cash Card</td>
+                <td class="check">✓</td>
+            </tr>
+            <tr>
+                <td>Women-Focused Position</td>
+                <td class="check" style="background:rgba(94,234,212,0.04);">✓ Core identity</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗ (Ellevest exited)</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+            </tr>
+            <tr>
+                <td>Options Trading</td>
+                <td class="cross" style="background:rgba(94,234,212,0.04);">✗</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+    
+    <div class="comp-context">
+        <strong>Strategic read:</strong> Alinea is the only platform combining guided portfolios, AI coaching, themed playlists, social features, AND women-focused positioning. No competitor covers all five. But Alinea is also the most expensive subscription option while missing table-stakes features (retirement accounts, banking, high-yield savings) that most competitors include free. The competitive moat is <em>guidance + community + identity</em> — not features. Creative must sell the relationship and coaching value, not the feature set. The $120 price objection will surface against every competitor on this chart.
+    </div>
+    
+    <hr class="comp-divider">
+    
+    <h3 style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 16px;font-weight:600;">Indirect Competitors — Strategic Context</h3>
+    <p style="color:var(--text-dim); margin-bottom:16px; font-size:0.82rem;">These platforms don't compete feature-for-feature with Alinea but fight for the same user's attention, money, and trust. No Pathmatics ad data — context is strategic.</p>
+    
+    <div class="indirect-section">
+        <h4>Betterment <span class="indirect-label">Robo-Advisor</span></h4>
+        <div class="comp-meta">
+            <span>💰 $48/yr or 0.25% AUM</span>
+            <span>👥 900K+ customers</span>
+            <span>📊 $55B+ AUM</span>
+        </div>
+        <p>The largest independent robo-advisor. Acquired Ellevest's retail automated investing clients in Feb 2025, absorbing the only other women-focused platform's user base. Offers tax-loss harvesting, retirement accounts, banking, and financial planning — all features Alinea lacks.</p>
+        <div class="strategic-note">
+            <strong>Why it matters:</strong> Betterment is where Alinea's most natural comparison users ended up after Ellevest exited. At 0.25% AUM (roughly $25/yr on a $10K portfolio vs. Alinea's $120), the price gap is massive. But Betterment is impersonal — no AI coach, no community, no themed playlists. Alinea's creative should position against the "robo" coldness: "Your money deserves more than an algorithm."
+        </div>
+    </div>
+    
+    <div class="indirect-section">
+        <h4>Wealthfront <span class="indirect-label">Robo-Advisor</span></h4>
+        <div class="comp-meta">
+            <span>💰 0.25% AUM</span>
+            <span>📊 $80B+ AUM</span>
+            <span>🎯 "Self-driving money"</span>
+        </div>
+        <p>Automated investing with a strong tax-optimization angle. Popular with tech-savvy millennials who want set-it-and-forget-it. Includes financial planning tools, direct indexing at $100K+, and a high-yield cash account. No social features, no community, no education beyond articles.</p>
+        <div class="strategic-note">
+            <strong>Why it matters:</strong> Alinea's founders described the product as "Wealthfront meets Robinhood." The automated portfolio management is comparable, but Alinea adds the human/AI guidance layer and community that Wealthfront explicitly doesn't provide. Creative angle: Wealthfront optimizes your taxes, Alinea optimizes your understanding.
+        </div>
+    </div>
+    
+    <div class="indirect-section">
+        <h4>Public.com <span class="indirect-label">Social Investing</span></h4>
+        <div class="comp-meta">
+            <span>💰 Free (premium $10/mo)</span>
+            <span>⭐ 4.7★ iOS</span>
+            <span>🎯 Social-first investing</span>
+        </div>
+        <p>The closest competitor on social/community features. Public lets users follow other investors, share portfolios, and discuss stocks. Also building AI features (Alpha AI). Offers stocks, ETFs, crypto, options, bonds, and treasuries — broader product than Alinea at a lower price.</p>
+        <div class="strategic-note">
+            <strong>Why it matters:</strong> Public is building the most similar social investing experience but with a gender-neutral, slightly more sophisticated positioning. If Alinea's "investment playlists" concept takes off, Public has the infrastructure to copy it. The differentiation is Alinea's focus on beginners + guidance (Public assumes more self-direction) and the women-focused identity. Creative should lean into "built for you" vs. Public's "built for everyone."
+        </div>
+    </div>
+    
+    <div class="indirect-section">
+        <h4>Cash App Investing <span class="indirect-label">Payments Ecosystem</span></h4>
+        <div class="comp-meta">
+            <span>💰 Free</span>
+            <span>👥 57M+ monthly actives</span>
+            <span>🎯 Same clearing firm (DriveWealth)</span>
+        </div>
+        <p>Cash App's investing feature is embedded in the payments app 57M+ people already use. Offers stocks, ETFs, and Bitcoin — the same core asset classes as Alinea, powered by the same clearing firm (DriveWealth). No guidance, no education, no portfolios. It's pure self-directed investing as a feature within payments.</p>
+        <div class="strategic-note">
+            <strong>Why it matters:</strong> Cash App is where many of Alinea's target users already are — Gen Z women use it for peer payments daily. The risk is inertia: "Why download another app when I can buy stocks in Cash App?" Alinea's creative must sell the GUIDED experience as fundamentally different from clicking "buy" on a stock inside a payments app. This is the "I tried investing in Cash App but had no idea what to pick" testimonial opportunity.
+        </div>
+    </div>
+    
+    <div class="indirect-section">
+        <h4>Fidelity <span class="indirect-label">Traditional Brokerage</span></h4>
+        <div class="comp-meta">
+            <span>💰 Free</span>
+            <span>👥 46M+ accounts</span>
+            <span>📊 $14T+ AUM (firm-wide)</span>
+        </div>
+        <p>The 800-lb gorilla. Fidelity offers everything — stocks, ETFs, mutual funds, IRAs, 401k management, HSAs, crypto (via ETP), options, bonds — all free. Fidelity Go (robo) starts at 0% for balances under $25K. Youth accounts available for teens. Massive learning center.</p>
+        <div class="strategic-note">
+            <strong>Why it matters:</strong> Fidelity is the rational-case competitor. Any advisor or finance influencer recommending "just open a Fidelity account" is competing with Alinea. But Fidelity's app and onboarding are designed for broad audiences, not Gen Z women. The interface is feature-rich but intimidating for true beginners. This is the "I downloaded Fidelity and couldn't understand a single screen" creative angle already used in existing Alinea ads — and it's the right instinct. Creative should make Fidelity (and Schwab/Vanguard) represent "the old way" that Alinea simplifies.
+        </div>
+    </div>
+    
+    <div class="indirect-section">
+        <h4>Ellevest <span class="indirect-label">Women-Focused — Exited Retail</span></h4>
+        <div class="comp-meta">
+            <span>💰 Was $12/mo — retail clients transferred to Betterment (Apr 2025)</span>
+            <span>🎯 Pivoted to $500K+ wealth management</span>
+        </div>
+        <p>The only direct precedent for women-focused investing. Founded by Sallie Krawcheck (ex-CEO Citigroup/Merrill Lynch), Ellevest built a loyal following but transferred all retail automated investing accounts to Betterment in April 2025 and pivoted to private wealth management ($500K+ minimum). The mobile app was discontinued.</p>
+        <div class="strategic-note">
+            <strong>Why it matters:</strong> Ellevest's exit validates two things: (1) there IS a market for women-focused investing (3M+ users), and (2) the market's previous option is gone, leaving a vacuum Alinea can fill. But it also warns: Ellevest couldn't make the economics work at scale for retail. Alinea's $120/yr subscription needs to prove sustainable where Ellevest's $12/mo couldn't. Creative opportunity: "The investing app built for women is back — and this time it's built by Gen Z women who actually use it." Ellevest's user base is now orphaned at Betterment, which has zero women-specific positioning.
+        </div>
+    </div>
+    
+    <hr class="comp-divider">
+
+    <h3 style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 16px;font-weight:600;">Direct Competitors — Ad Libraries</h3>
+    <p style="color:var(--text-dim); margin-bottom:20px; font-size:0.82rem;">Top ads per competitor from Pathmatics (est. spend). Media assets may not load if S3 links have expired.</p>
+
     <div class="comp-section">
         <h4>Robinhood</h4>
         <div class="ad-grid"><div class="ad-card">
@@ -2040,51 +2426,6 @@ tr:hover td { background: rgba(255,255,255,0.02); }
             
             <div class="ad-metrics"><span class="metric"><b>$153,383</b> spend</span></div>
         </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#2</div>
-        <div class="ad-media">
-            <img src="https://s3.amazonaws.com/YM_Ads/1764087144886383128.png" loading="lazy" alt="Girl math says if you already did the research" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="Girl math says if you already did the research">Girl math says if you already did the research</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$127,037</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#3</div>
-        <div class="ad-media">
-            <img src="https://s3.amazonaws.com/YM_Ads/-5197266950870078602.jpeg" loading="lazy" alt="Turn your insights into trades." onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="Turn your insights into trades.">Turn your insights into trades.</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$98,158</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#4</div>
-        <div class="ad-media">
-            <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/7d8b303e33b6af20/media" type="video/mp4">
-            </video>
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="A suite of 80+ technical indicators and drawing tools to discover patterns and spot opportunities.">A suite of 80+ technical indicators and drawing tools to dis...</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$77,914</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#5</div>
-        <div class="ad-media">
-            <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/9cc6526f1deed017/media" type="video/mp4">
-            </video>
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="Earn high APY on uninvested cash with Robinhood Gold. $5/month subscription & terms apply.">Earn high APY on uninvested cash with Robinhood Gold. $5/mon...</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$69,674</b> spend</span></div>
-        </div>
-    </div></div>
     </div>
     <div class="comp-section">
         <h4>Acorns</h4>
@@ -2100,53 +2441,6 @@ tr:hover td { background: rgba(255,255,255,0.02); }
             
             <div class="ad-metrics"><span class="metric"><b>$109,041</b> spend</span></div>
         </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#2</div>
-        <div class="ad-media">
-            <img src="https://s3.amazonaws.com/YM_Ads/-777345058687474608.png" loading="lazy" alt="Everyone's money has Potential. Acorns makes it easy to star..." onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="Everyone's money has Potential. Acorns makes it easy to start investing in just 5 minutes.">Everyone's money has Potential. Acorns makes it easy to star...</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$102,369</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#3</div>
-        <div class="ad-media">
-            <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/425bca79d7280151/media" type="video/mp4">
-            </video>
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title=""></div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$44,786</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#4</div>
-        <div class="ad-media">
-            <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/ebaa2c2605097488/media" type="video/mp4">
-            </video>
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title=""></div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$44,567</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#5</div>
-        <div class="ad-media">
-            <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/a7c948a8b910e4e1/media" type="video/mp4">
-            </video>
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title=""></div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$21,666</b> spend</span></div>
-        </div>
-    </div></div>
     </div>
     <div class="comp-section">
         <h4>SoFi</h4>
@@ -2160,49 +2454,6 @@ tr:hover td { background: rgba(255,255,255,0.02); }
             
             <div class="ad-metrics"><span class="metric"><b>$67,776</b> spend</span></div>
         </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#2</div>
-        <div class="ad-media">
-            <img src="https://s3.amazonaws.com/YM_Ads/-7998197147511283952.png" loading="lazy" alt="Each week through March 31, 2026 new SoFi Crypto members spl..." onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="Each week through March 31, 2026 new SoFi Crypto members split $100K in Bitcoin-on us.*">Each week through March 31, 2026 new SoFi Crypto members spl...</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$31,167</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#3</div>
-        <div class="ad-media">
-            <img src="https://s3.amazonaws.com/YM_Ads/1381016172687080143.png" loading="lazy" alt="SoFi’s app makes it easy for students to start investing. St..." onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="SoFi’s app makes it easy for students to start investing. Start aiming to build wealth before you graduate  ">SoFi’s app makes it easy for students to start investing. St...</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$5,839</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#4</div>
-        <div class="ad-media">
-            <img src="https://s3.amazonaws.com/YM_Ads/4854477717384809627.png" loading="lazy" alt="SoFi’s app makes it easy for students to start investing. St..." onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="SoFi’s app makes it easy for students to start investing. Start aiming to build wealth before you graduate  ">SoFi’s app makes it easy for students to start investing. St...</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$5,812</b> spend</span></div>
-        </div>
-    </div><div class="ad-card">
-        <div class="ad-rank">#5</div>
-        <div class="ad-media">
-            <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/8898c356cead1bbe/media" type="video/mp4">
-            </video>
-        </div>
-        <div class="ad-info">
-            <div class="ad-name" title="Open and fund a new account and get up to $1K in stocks.* Trade stocks, ETFs, and more without commissions. Other fees apply.">Open and fund a new account and get up to $1K in stocks.* Tr...</div>
-            
-            <div class="ad-metrics"><span class="metric"><b>$4,798</b> spend</span></div>
-        </div>
-    </div></div>
     </div>
     <div class="comp-section">
         <h4>Stash</h4>
@@ -2216,56 +2467,174 @@ tr:hover td { background: rgba(255,255,255,0.02); }
             
             <div class="ad-metrics"><span class="metric"><b>$14,277</b> spend</span></div>
         </div>
+    </div>
+    <h3 style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin:32px 0 16px;font-weight:600;">Indirect Competitors — Ad Libraries</h3>
+    <p style="color:var(--text-dim); margin-bottom:20px; font-size:0.82rem;">From Pathmatics category export (Investing & Financial Management, Mar–Apr 2026). Estimated spend. Not all indirect competitors had ads in the category pull — Wealthfront, Public.com, and Ellevest had zero ads in this window.</p>
+    <div class="comp-section">
+        <h4>Fidelity <span class="indirect-label">Indirect</span></h4>
+        <div class="ad-grid"><div class="ad-card">
+        <div class="ad-rank">#1</div>
+        <div class="ad-media">
+            <video controls preload="none" poster="" playsinline>
+                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/c0d0f4a172c82b19/media" type="video/mp4">
+            </video>
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="Make a tax-smart move. Open and fund a Fidelity IRA by 4/15/2026. You may reduce your taxable income for 2025.">Make a tax-smart move. Open and fund a Fidelity IRA by 4/15/...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$376,320</b> spend</span></div>
+        </div>
     </div><div class="ad-card">
         <div class="ad-rank">#2</div>
         <div class="ad-media">
             <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/2c5b0f1394a19c33/media" type="video/mp4">
+                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/a8019173b20fbaf9/media" type="video/mp4">
             </video>
         </div>
         <div class="ad-info">
-            <div class="ad-name" title="+ STASH Get up to 5% + in stock rewards Limitations apply. 5% Stock-Back rewards available only for qualified bonus merchants on Stash+ See bonus terms & conditions All Stock-Back rewards contribute t">+ STASH Get up to 5% + in stock rewards Limitations apply. 5...</div>
+            <div class="ad-name" title="Fidelity Active ETFs can adapt to changes in market conditions to pursue outperformance.">Fidelity Active ETFs can adapt to changes in market conditio...</div>
             
-            <div class="ad-metrics"><span class="metric"><b>$12,035</b> spend</span></div>
+            <div class="ad-metrics"><span class="metric"><b>$187,938</b> spend</span></div>
         </div>
     </div><div class="ad-card">
         <div class="ad-rank">#3</div>
         <div class="ad-media">
             <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/c7966f577b67e179/media" type="video/mp4">
+                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/d500fe98e8a559eb/media" type="video/mp4">
             </video>
         </div>
         <div class="ad-info">
-            <div class="ad-name" title="STASH Start with just $5 Investment advisory services offered by Stash investments LLC 100 SEC registered Holdings and performance one hypotheticac 9:41 Welcome, Johnny Refer a friend, get $20 TOTAL V">STASH Start with just $5 Investment advisory services offere...</div>
+            <div class="ad-name" title="Got a question? We've got you. Get in touch with us any time and get the answers you need when you need them.">Got a question? We've got you. Get in touch with us any time...</div>
             
-            <div class="ad-metrics"><span class="metric"><b>$11,365</b> spend</span></div>
+            <div class="ad-metrics"><span class="metric"><b>$104,424</b> spend</span></div>
+        </div>
+    </div><div class="ad-card">
+        <div class="ad-rank">#4</div>
+        <div class="ad-media">
+            <img src="https://s3.amazonaws.com/YM_Ads/-1291062030214099742.png" loading="lazy" alt="Tech stocks, green stocks, luxury stocks. Grab your stocks and ETFs, build a bas" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="Tech stocks, green stocks, luxury stocks. Grab your stocks and ETFs, build a basket, and manage it as one investment.">Tech stocks, green stocks, luxury stocks. Grab your stocks a...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$88,541</b> spend</span></div>
+        </div>
+    </div><div class="ad-card">
+        <div class="ad-rank">#5</div>
+        <div class="ad-media">
+            <img src="https://s3.amazonaws.com/YM_Ads/-6566184902504246169.png" loading="lazy" alt="Considering a 401(k) rollover? Fidelity can help you understand your options and" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="Considering a 401(k) rollover? Fidelity can help you understand your options and avoid taxes, so you can feel good about your retirement savings.">Considering a 401(k) rollover? Fidelity can help you underst...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$62,768</b> spend</span></div>
+        </div>
+    </div></div>
+    </div>
+    <div class="comp-section">
+        <h4>Betterment <span class="indirect-label">Indirect</span></h4>
+        <div class="ad-grid"><div class="ad-card">
+        <div class="ad-rank">#1</div>
+        <div class="ad-media">
+            <video controls preload="none" poster="" playsinline>
+                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/ee7db75dd7ac4e12/media" type="video/mp4">
+            </video>
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="PRO TIP: You have until April 15 to contribute to and max out an IRA for 2025. And you might even be able to deduct those contributions on your 2025 tax return.">PRO TIP: You have until April 15 to contribute to and max ou...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$22,372</b> spend</span></div>
+        </div>
+    </div><div class="ad-card">
+        <div class="ad-rank">#2</div>
+        <div class="ad-media">
+            <img src="https://s3.amazonaws.com/YM_Ads/-7204709784414167259.png" loading="lazy" alt="You can’t argue with numbers like that. Start earning a 3.90% (variable) APY wit" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="You can’t argue with numbers like that. Start earning a 3.90% (variable) APY with a Betterment high-yield cash account.">You can’t argue with numbers like that. Start earning a 3.90...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$20,154</b> spend</span></div>
+        </div>
+    </div><div class="ad-card">
+        <div class="ad-rank">#3</div>
+        <div class="ad-media">
+            <img src="https://s3.amazonaws.com/YM_Ads/4624877278535357485.png" loading="lazy" alt="Right now, new investing customers can get up to $1,500 with a qualifying deposi" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="Right now, new investing customers can get up to $1,500 with a qualifying deposit. Terms apply.">Right now, new investing customers can get up to $1,500 with...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$18,622</b> spend</span></div>
         </div>
     </div><div class="ad-card">
         <div class="ad-rank">#4</div>
         <div class="ad-media">
             <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/3330f9b5c73c5a6b/media" type="video/mp4">
+                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/55131f4db0bdd572/media" type="video/mp4">
             </video>
         </div>
         <div class="ad-info">
-            <div class="ad-name" title="  With Stash, expert-managed portfolios start at just $3/month—try your first 7 days on us!  The average Stasher has set aside over $600 in their first year.1  Skip the $300/hour financial advisor fee">  With Stash, expert-managed portfolios start at just $3/mon...</div>
+            <div class="ad-name" title="Don’t let a tax-cident hit you when you least expect it. Invest automatically with Betterment and stay tax-smart.">Don’t let a tax-cident hit you when you least expect it. Inv...</div>
             
-            <div class="ad-metrics"><span class="metric"><b>$3,185</b> spend</span></div>
+            <div class="ad-metrics"><span class="metric"><b>$10,179</b> spend</span></div>
         </div>
     </div><div class="ad-card">
         <div class="ad-rank">#5</div>
         <div class="ad-media">
             <video controls preload="none" poster="" playsinline>
-                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/42b812184f0af9ba/media" type="video/mp4">
+                <source src="https://x-ad-assets.s3.amazonaws.com/media_asset/254b3962c3440199/media" type="video/mp4">
             </video>
         </div>
         <div class="ad-info">
-            <div class="ad-name" title=""></div>
+            <div class="ad-name" title="Don’t forget you have until April 15 to max out your 2025 IRA. Set sail into retirement with tax-advantaged growth and the magic of compound returns.">Don’t forget you have until April 15 to max out your 2025 IR...</div>
             
-            <div class="ad-metrics"><span class="metric"><b>$2,332</b> spend</span></div>
+            <div class="ad-metrics"><span class="metric"><b>$9,915</b> spend</span></div>
         </div>
     </div></div>
     </div>
+    <div class="comp-section">
+        <h4>Cash App <span class="indirect-label">Indirect</span></h4>
+        <div class="ad-grid"><div class="ad-card">
+        <div class="ad-rank">#1</div>
+        <div class="ad-media">
+            <img src="https://s3.amazonaws.com/YM_Ads/5673129787965000133.png" loading="lazy" alt="When you buy bitcoin on Cash App, it's yours" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="When you buy bitcoin on Cash App, it's yours">When you buy bitcoin on Cash App, it's yours...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$59,144</b> spend</span></div>
+        </div>
+    </div><div class="ad-card">
+        <div class="ad-rank">#2</div>
+        <div class="ad-media">
+            <img src="https://s3.amazonaws.com/YM_Ads/-5941790961549683849.png" loading="lazy" alt="When you buy bitcoin on Cash App, it's yours" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="When you buy bitcoin on Cash App, it's yours">When you buy bitcoin on Cash App, it's yours...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$19,795</b> spend</span></div>
+        </div>
+    </div><div class="ad-card">
+        <div class="ad-rank">#3</div>
+        <div class="ad-media">
+            <img src="https://s3.amazonaws.com/YM_Ads/-6329168025588480175.jpeg" loading="lazy" alt="Get bitcoin on Cash App" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="Get bitcoin on Cash App">Get bitcoin on Cash App...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$15,815</b> spend</span></div>
+        </div>
+    </div><div class="ad-card">
+        <div class="ad-rank">#4</div>
+        <div class="ad-media">
+            <img src="https://s3.amazonaws.com/YM_Ads/-902951436940070293.png" loading="lazy" alt="No fees when you auto invest, round up or get paid in bitcoin on Cash App" onerror="this.parentElement.innerHTML='<div class=\'media-error\'>Image unavailable</div>'">
+        </div>
+        <div class="ad-info">
+            <div class="ad-name" title="No fees when you auto invest, round up or get paid in bitcoin on Cash App">No fees when you auto invest, round up or get paid in bitcoi...</div>
+            
+            <div class="ad-metrics"><span class="metric"><b>$4,742</b> spend</span></div>
+        </div>
+    </div></div>
+    </div>
+
 </div>
 </div>
 
