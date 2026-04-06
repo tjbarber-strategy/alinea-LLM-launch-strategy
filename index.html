@@ -30,25 +30,28 @@
     --purple: #a78bfa;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; color: #ffffff !important; }
 
 body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
-    color: #ffffff;
+    color: #ffffff !important;
     line-height: 1.65;
     font-size: 14.5px;
 }
 
-.collapse-content, .collapse-content p, .collapse-content li, .collapse-content span,
-.prose p, .prose li, .prose span,
-.callout, .callout p, .callout span,
-table td, table th,
-.section-text, .section-text p {
-    color: #ffffff;
-}
-.prose strong, .metric b, .gap-desc { color: #ffffff !important; }
-.prose em, .metric, .gap-evidence, .collapse-content .text-dim { color: #c8cdd6 !important; }
+/* Re-apply accent colors after the nuclear reset */
+.nav-btn.active, .collapse-header h3, .prose h4, .tab-btn.active,
+h3.section-title, .ad-name, .gap-id, [style*="color:var(--accent)"] { color: var(--accent) !important; }
+.badge-high, .ad-rating.win, .conf-high { color: var(--win) !important; }
+.badge-moderate, .ad-rating.hit, .conf-mod { color: var(--hit) !important; }
+.badge-p1, .badge-critical { color: var(--danger) !important; }
+.badge-p2, .ad-rating.testing { color: var(--warn) !important; }
+.badge-new { color: var(--purple) !important; }
+.ad-rating.fail, .priority-p3 { color: var(--fail) !important; }
+.priority-p1 { color: var(--p1) !important; }
+.priority-p2 { color: var(--p2) !important; }
+.prose em, .gap-evidence, .text-dim, .nav-btn, .metric, .ad-metric-label, .tab-btn { color: #c8cdd6 !important; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
