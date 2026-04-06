@@ -233,8 +233,8 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 /* ===== AD CARDS ===== */
 .ad-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 14px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
     margin: 16px 0;
 }
 .ad-card {
@@ -259,8 +259,8 @@ tr:hover td { background: rgba(255,255,255,0.02); }
     backdrop-filter: blur(4px);
 }
 .ad-media {
-    aspect-ratio: 9/16;
-    max-height: 320px;
+    aspect-ratio: 4/5;
+    max-height: 220px;
     background: #000;
     display: flex;
     align-items: center;
@@ -393,7 +393,10 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 
 /* ===== COMP SECTION ===== */
 .comp-section {
-    margin-bottom: 24px;
+    display: block;
+    width: 100%;
+    margin-bottom: 28px;
+    clear: both;
 }
 .comp-section h4 {
     font-size: 0.9rem;
@@ -446,7 +449,7 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero h1 { font-size: 1.6rem; }
-    .ad-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .ad-grid { grid-template-columns: repeat(3, 1fr); }
     .collapse-content { padding: 0 14px 14px; }
 }
 
