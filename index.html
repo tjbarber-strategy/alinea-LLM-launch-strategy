@@ -35,10 +35,20 @@
 body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
-    color: var(--text);
+    color: #ffffff;
     line-height: 1.65;
     font-size: 14.5px;
 }
+
+.collapse-content, .collapse-content p, .collapse-content li, .collapse-content span,
+.prose p, .prose li, .prose span,
+.callout, .callout p, .callout span,
+table td, table th,
+.section-text, .section-text p {
+    color: #ffffff;
+}
+.prose strong, .metric b, .gap-desc { color: #ffffff !important; }
+.prose em, .metric, .gap-evidence, .collapse-content .text-dim { color: #c8cdd6 !important; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
@@ -325,6 +335,7 @@ tr:hover td { background: rgba(255,255,255,0.02); }
     border-radius: 6px;
     margin: 14px 0;
     font-size: 0.85rem;
+    color: #ffffff;
 }
 .callout-warn {
     background: rgba(251,191,36,0.06);
